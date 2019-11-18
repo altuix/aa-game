@@ -44,8 +44,13 @@ public class OyunYoneticisi : MonoBehaviour
 
     void Start()
     {
+
+
         //level no yazdırdık
         DonenCarkLevelText.text = SceneManager.GetActiveScene().name;
+
+        //son kalınan leveli kayıt ettik
+        PlayerPrefs.SetInt("lastLevel", int.Parse(SceneManager.GetActiveScene().name));
 
         donenCember = GameObject.FindGameObjectWithTag("DonenCemberTag");
         anaCember = GameObject.FindGameObjectWithTag("AnaCemberTag");
@@ -114,7 +119,7 @@ public class OyunYoneticisi : MonoBehaviour
             string newLevelName = (int.Parse(SceneManager.GetActiveScene().name) + 1).ToString();
             SceneManager.LoadScene(newLevelName);
         }
-       
+
     }
 
 
