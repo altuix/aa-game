@@ -8,10 +8,10 @@ public class MenuKontrol : MonoBehaviour
 
     int lastLevel;
 
-    //private void Start()
-    //{   //tüm saveleri silmek için
-    //    //PlayerPrefs.DeleteAll();
-    //}
+    private void Start()
+    {   //tüm saveleri silmek için
+        //PlayerPrefs.DeleteAll();
+    }
 
     public void oyunaGit()
     {

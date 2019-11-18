@@ -7,6 +7,7 @@ public class AnaCember : MonoBehaviour
     public GameObject kucukCember;
     GameObject OyunYonetici;
 
+    public float saplamaHizi = 5;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +27,6 @@ public class AnaCember : MonoBehaviour
 
     void kucukCemberOlustur()
     {
-        Instantiate(kucukCember, transform.position, transform.rotation);
+        Instantiate(kucukCember, transform.position * saplamaHizi * Time.deltaTime, transform.rotation);
     }
 }
